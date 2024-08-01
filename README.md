@@ -57,11 +57,16 @@ i. Click "Start" menu icon
 
 
 
-<br>v.Allow the System will "Restart" in Safe Mode and re-sign in. Once signed in you will notice the save mode at the top of the left corner of the Machine. 
+<br>v.Allow the System to "Restart" in Safe Mode and re-sign in. Once signed in you will notice the save mode at the top of the left corner of the Machine. 
 
 <h3>Disabling services via the Registry while in Safe Mode</h3>
 i. Click the "Start" menu icon
 <br>ii. Search for "regedit" in the search menu. 
+<br>iii. For each registry location you will need to browse to the key, "Start" value and change each one to 4. The registrys path you will need to follow is >  Computer\HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services
+
+<br> each will end in >  \Sense; \WdBoot; \ WindDefend; \WdNisDrv; \WdNisSvc; \WdFilter
+
+<br>![Screenshot (81)](https://github.com/user-attachments/assets/9f687111-895b-4b32-8b9e-ff6224ec7788)
 
 
 
