@@ -62,11 +62,23 @@ i. Click "Start" menu icon
 <h3>Disabling services via the Registry while in Safe Mode</h3>
 i. Click the "Start" menu icon
 <br>ii. Search for "regedit" in the search menu. 
-<br>iii. For each registry location you will need to browse to the key, "Start" value and change each one to 4. The registrys path you will need to follow is >  Computer\HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services
+<br>iii. For each registry location you will need to browse to the key, "Start" value and change each one to 4. The registrys path you will need to follow is >  Computer\HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services...
 
 <br> each will end in >  \Sense; \WdBoot; \ WindDefend; \WdNisDrv; \WdNisSvc; \WdFilter
 
 <br>![Screenshot (81)](https://github.com/user-attachments/assets/9f687111-895b-4b32-8b9e-ff6224ec7788)
 
+<br>iv. We will then go back into "msconfig" from the "Start Menu" icon and uncheck the "Safe boot" checkbox. Apply > OK and allow the sytem to restart. Microsoft Defender should no longer be on the System. 
 
+<br>![Screenshot (82)](https://github.com/user-attachments/assets/16349792-c787-4241-8be2-fe0ffa6b9d05)
+
+<h3>Prevent the Window VM from going into standby</h3>
+i. Open a "cmd" in "Run as admin." and input the following commands. 
+
+<br>powercfg /change standby-timeout-ac 0
+<br>powercfg /change standby-timeout-dc 0
+<br>powercfg /change monitor-timeout-ac 0
+<br>powercfg /change monitor-timeout-dc 0
+<br>powercfg /change hibernate-timeout-ac 0
+<br>powercfg /change hibernate-timeout-dc 0
 
