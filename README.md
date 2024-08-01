@@ -44,6 +44,24 @@ i. Click on "Start" menu icon.
 
 <h3>C. Perm. disable Defender via Registry </h3>
 i. From the same command terminal , enter the command.
-<br> REG ADD "hklm\software\policies\microsoft\windows defender" /v DisableAntiSpyware /t REG_DWORD /d 1 /f
+
+<br><i> REG ADD "hklm\software\policies\microsoft\windows defender" /v DisableAntiSpyware /t REG_DWORD /d 1 /f </i>
+
+<h3> Prepare to boot into "Safe Mode" to disable all Defender services</h3>
+i. Click "Start" menu icon
+<br>ii. Type "msconfig" into the search bar within the Start Menu
+<br>iii. Navigate to the "Boot" tab and select "Boot Options", from there you wil click the "Safe Boot" box leaving the "Minimal" button enabled. 
+<br>iv. Click "Apply" > "OK". 
+
+<br>![Screenshot (80)](https://github.com/user-attachments/assets/cda91548-4fa0-43bc-877b-7caaa7b42b81)
+
+
+
+<br>v.Allow the System will "Restart" in Safe Mode and re-sign in. Once signed in you will notice the save mode at the top of the left corner of the Machine. 
+
+<h3>Disabling services via the Registry while in Safe Mode</h3>
+i. Click the "Start" menu icon
+<br>ii. Search for "regedit" in the search menu. 
+
 
 
