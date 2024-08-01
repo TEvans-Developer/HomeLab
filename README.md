@@ -21,7 +21,14 @@ Set up the Windows Machine, then sign into the machine.
 
 <h3>Disable Microsft Machine</h3>
 I. On your Windows Machine Click "Start" menu icon.
-II.Click "Settings"
-III. Click "Privacy and Security" 
-IV.
+<br>II. Click "Settings"
+<br>III. Click "Privacy and Security" 
+<br>IV. Click "Windows Security"
+<br>V. Click "Virus & Threat protection"
+<br>VI. Underneath the "Virus & Threat protection settings" click "Manage Settings"
+<br>VII. Toggle OFF the "Tamper protection" switch. When promtped click yes to allow the changes.
+
+<br>![Screenshot (78)](https://github.com/user-attachments/assets/11c5d2c9-829f-4c22-8c43-2b2a225d0f04)
+
+<br>VIII. Continue to toggle OFF ever other option here, then close the window we opened.
 
