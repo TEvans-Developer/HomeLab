@@ -32,11 +32,18 @@ i. On your Windows Machine Click "Start" menu icon.
 
 <br>VIII. Continue to toggle OFF ever other option here, then close the window we opened.
 
-<h3> B. Disable Defender via Group Policy Editor</h3>
+<h3>B. Disable Defender via Group Policy Editor</h3>
 i. Click on "Start" menu icon.
 <br>ii. In the search bar type "cmd" and right click to "Run as administrator" then run the command "gpedit.msc"
 <br>iii. Once prompted , click Computer Configuration > Administrative Templates > Windows Components > Microsoft Defender Antivirus
 <br>iv. Double-click "Turn off Microsoft Defender Antivirius", then select "Enabled" > Click "Apply" > Click "OK"
 
 <br>![Screenshot (79)](https://github.com/user-attachments/assets/ab0d1ab4-e480-46ef-8e26-5e8cdacd79be)
+
+<br> <i>** Enabling the policy will make it so that Microsoft Defenders Antivirius does not run and will not scan for malware and other unneeded software.  </i>
+
+<h3>C. Perm. disable Defender via Registry </h3>
+i. From the same command terminal , enter the command.
+<br> REG ADD "hklm\software\policies\microsoft\windows defender" /v DisableAntiSpyware /t REG_DWORD /d 1 /f
+
 
