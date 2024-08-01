@@ -82,3 +82,14 @@ i. Open a "cmd" in "Run as admin." and input the following commands.
 <br>powercfg /change hibernate-timeout-ac 0
 <br>powercfg /change hibernate-timeout-dc 0
 
+<h2>Installing Sysmon</h2>
+<hr>
+Invoke-WebRequest -Uri https://download.sysinternals.com/files/Sysmon.zip -OutFile C:\Windows\Temp\Sysmon.zip
+
+
+
+<h2>Installing LimaCharlie EDR on the Windows VM</h2>
+<hr>
+<i> What is LimaCharlie </i>
+
+<br> A SecOps cloud-based security tools and infrastructure
