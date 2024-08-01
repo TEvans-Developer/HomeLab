@@ -93,3 +93,10 @@ Invoke-WebRequest -Uri https://download.sysinternals.com/files/Sysmon.zip -OutFi
 <i> What is LimaCharlie </i>
 
 <br> A SecOps cloud-based security tools and infrastructure
+
+<h3>Setting up LimaCharlie</h3>
+i. Go to LimaCharlie website and set up an account. Once the account is set up and question are answered "Create a new organization"
+<br>ii. The name should be unique, "Data Residency Region" should be whatever is closest to you, in this cause for me it is USA. Demo Configuration should be disabled with the "Demo Configuration" "Template" set as "Extended Detection & Response Standard". Then click "Create Organization"
+
+<br>![Screenshot (83)](https://github.com/user-attachments/assets/875dfde1-76ee-4566-9464-84b58014b4d7)
+
