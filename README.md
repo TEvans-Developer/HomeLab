@@ -10,6 +10,6 @@ real-time protection, firewall and network protection, device performance monito
 
 <i>What do we need to disable Microsoft Defender for this lab?</i>
 
-<br> <b> <style color="red"> **Disclaimer. One should not disable Microsoft Defender on their local machine as it is inplaced to help keep your local machine protected from cyber attacks.  For demostaration purposes we will be disabling it on a VM.** </b>
+<br> <b> <style=color:"red"> **Disclaimer. One should not disable Microsoft Defender on their local machine as it is inplaced to help keep your local machine protected from cyber attacks.  For demostaration purposes we will be disabling it on a VM.** </b>
 
 <br> Disabling Microsoft Defender on our Windows Machine is imperative for the attack to be successfull. This will allow for our EDR (LimaCharlie) to detect the attack and respond to it. If Microsoft Defender is enabled the attack will face greater challenges to exploit the Windows Machine.  
