@@ -19,16 +19,24 @@ Set up the Windows Machine, then sign into the machine.
 
 <br>*** LINK HERE***
 
-<h3>Disable Microsft Machine</h3>
-I. On your Windows Machine Click "Start" menu icon.
-<br>II. Click "Settings"
-<br>III. Click "Privacy and Security" 
-<br>IV. Click "Windows Security"
-<br>V. Click "Virus & Threat protection"
-<br>VI. Underneath the "Virus & Threat protection settings" click "Manage Settings"
-<br>VII. Toggle OFF the "Tamper protection" switch. When promtped click yes to allow the changes.
+<h3> A. Disabling Tamper Protection</h3>
+i. On your Windows Machine Click "Start" menu icon.
+<br>ii. Click "Settings"
+<br>iii. Click "Privacy and Security" 
+<br>iv. Click "Windows Security"
+<br>v. Click "Virus & Threat protection"
+<br>vi. Underneath the "Virus & Threat protection settings" click "Manage Settings"
+<br>vii. Toggle OFF the "Tamper protection" switch. When promtped click yes to allow the changes.
 
 <br>![Screenshot (78)](https://github.com/user-attachments/assets/11c5d2c9-829f-4c22-8c43-2b2a225d0f04)
 
 <br>VIII. Continue to toggle OFF ever other option here, then close the window we opened.
+
+<h3> B. Disable Defender via Group Policy Editor</h3>
+i. Click on "Start" menu icon.
+<br>ii. In the search bar type "cmd" and right click to "Run as administrator" then run the command "gpedit.msc"
+<br>iii. Once prompted , click Computer Configuration > Administrative Templates > Windows Components > Microsoft Defender Antivirus
+<br>iv. Double-click "Turn off Microsoft Defender Antivirius", then select "Enabled" > Click "Apply" > Click "OK"
+
+<br>![Screenshot (79)](https://github.com/user-attachments/assets/ab0d1ab4-e480-46ef-8e26-5e8cdacd79be)
 
