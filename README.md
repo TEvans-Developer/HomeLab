@@ -181,3 +181,20 @@ i. We should log into our Attack Machine (Ubuntu) and type in command line "sudo
 <br> version:2
 
 <br>vi. We will now type in the command "sudo netplan try" > then command "sudo netplan apply" > then check ping to Google DNS with command "ping 8.8.8.8". The IP should now be statically applied and we will now exit the command prompt.
+
+<h2>Setup Attack System part 2.</h2>
+We will be using the coommand prompt on our host machine, may it be Linux, Mac, Windows or any other third party tool to start a SSH to our Ubuntu VM. 
+
+<br>i. We will open a command prompt on our host machine and type in 
+<br><i> ssh user@Attack_VM_IP</i>
+
+<br>ii. After gaining access we will input the command <i> sudo su </i> to help set up our C2 server by dropping us into the root shell.
+
+<br>iii. Our next set of commands will be used to download Sliver, which will be our Command and Control (C2) framework.
+
+<br> wget https://github.com/BishopFox/sliver/releases/download/v1.5.34/sliver-server_linux -O /usr/local/bin/sliver-server
+<br> chmod +x /usr/local/bin/sliver-server
+<br> apt install -y mingw-w64
+
+<br>iv. We will now create a directory for future workings
+<br> mkdir -p /opt/sliver
