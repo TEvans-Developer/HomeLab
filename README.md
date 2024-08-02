@@ -188,6 +188,9 @@ We will be using the coommand prompt on our host machine, may it be Linux, Mac, 
 <br>i. We will open a command prompt on our host machine and type in 
 <br><i> ssh user@Attack_VM_IP</i>
 
+<br>![Screenshot (87)](https://github.com/user-attachments/assets/c5829963-34ed-46ad-a1d2-0e14671d83bf)
+
+
 <br>ii. After gaining access we will input the command <i> sudo su </i> to help set up our C2 server by dropping us into the root shell.
 
 <br>iii. Our next set of commands will be used to download Sliver, which will be our Command and Control (C2) framework.
