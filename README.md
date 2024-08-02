@@ -106,6 +106,9 @@ i. Go to LimaCharlie website and set up an account. Once the account is set up a
 
 <br>** Do not click selected installer in step 2 on the website**
 
+<br>![Screenshot (84)](https://github.com/user-attachments/assets/559a3809-fbac-49a1-b9a4-37cc104e6a4f)
+
+
 <br>v. In the Windows machine you will open a new PowerShell as "Run as Admin." You then will need to enter the following command
 <br> "<i> cd :C\Users\User\Downloads</i> " 
 <br>**If folder not already created create one in this path**
@@ -113,7 +116,7 @@ i. Go to LimaCharlie website and set up an account. Once the account is set up a
 <br>v. Enter the following command into the terminal. 
 <br>Invoke-WebRequest -Uri https://downloads.limacharlie.io/sensor/windows/64 -Outfile C:\Users\User\Downloads\lc_sensor.exe
 
-<br> From here you wan to enter the command to shift into the standard command prompt
+<br> From here you want to enter the command to shift into the standard command prompt
 <br> "<i>cmd.exe</i>"
 
 <br>vi. We then will copy the installer code that is provide from the LimaCharlie website into our terminal
