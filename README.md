@@ -100,3 +100,25 @@ i. Go to LimaCharlie website and set up an account. Once the account is set up a
 
 <br>![Screenshot (83)](https://github.com/user-attachments/assets/875dfde1-76ee-4566-9464-84b58014b4d7)
 
+<br>iii. Once Org. is created you will need to click "Add Sensor". The credentials for this will be ass follow. Select "Windows" > provide a description for the key > click "Create" > Select Installation Key and select the key that was just created.
+
+<br>iv. We then will install Windows sensor "x86.64(.exe)"
+
+<br>** Do not click selected installer in step 2 on the website**
+
+<br>v. In the Windows machine you will open a new PowerShell as "Run as Admin." You then will need to enter the following command
+<br> "<i> cd :C\Users\User\Downloads</i> " 
+<br>**If folder not already created create one in this path**
+
+<br>v. Enter the following command into the terminal. 
+<br>Invoke-WebRequest -Uri https://downloads.limacharlie.io/sensor/windows/64 -Outfile C:\Users\User\Downloads\lc_sensor.exe
+
+<br> From here you wan to enter the command to shift into the standard command prompt
+<br> "<i>cmd.exe</i>"
+
+<br>vi. We then will copy the installer code that is provide from the LimaCharlie website into our terminal
+<br>** code maybe mixing the "lc_sensor.exe" before the "-i" in the given installer code. Enter "lc_sensor.exe" prior to pastingn the installer code to ensure it will install properly. 
+
+<br>![Screenshot (85)](https://github.com/user-attachments/assets/efa26cb3-2e08-4ad6-adc5-683dddd4add7)
+
+
