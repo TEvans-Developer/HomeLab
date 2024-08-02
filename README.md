@@ -124,4 +124,17 @@ i. Go to LimaCharlie website and set up an account. Once the account is set up a
 
 <br>![Screenshot (85)](https://github.com/user-attachments/assets/efa26cb3-2e08-4ad6-adc5-683dddd4add7)
 
+<h3>Configuring LimaCharlie to ship Sysmon even logs alongside its own EDR telemetry</h3>
+i. In your LimaCharlie account, on the leftside of the screen open the "Sensors" tab , find and click "Artifact Collection". 
+
+<br>ii. Navigate to "Artifact Collection Rule" and click "+Add Artifact Collection Rule"
+
+<br>iii. From here you will enter "wel://Microsoft-Windows-Sysmon/Operational:*" as your patterns, "10" will be the Retention Period, and "windows" will be the platform(s). Save the rule. 
+
+<br>iv. Close all windows within your Windows VM machine and save the VM snapchat. This can be found in the VMware Workstation under the VM tab and click "Snapshot"
+
+<hr>
+
+<h2>Setup Attack System (Ubuntu)</h2>
+<hr>
 
