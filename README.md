@@ -84,8 +84,28 @@ i. Open a "cmd" in "Run as admin." and input the following commands.
 
 <h2>Installing Sysmon</h2>
 <hr>
-Invoke-WebRequest -Uri https://download.sysinternals.com/files/Sysmon.zip -OutFile C:\Windows\Temp\Sysmon.zip
+<i>What is Sysmon ?</i>
+<br> Sysmon or System Monitor is a windows system service and device driver that logs system activity to the Windows event log such as process creation, network connections and file creation.
 
+<br>i. We first want to launch an Admin. Powershell  on our Windows VM and then download Sysmon with the following command.
+<br><i>Invoke-WebRequest -Uri https://download.sysinternals.com/files/Sysmon.zip -OutFile C:\Windows\Temp\Sysmon.zip</i>
+
+<br>ii. We will then unzip the Sysmon.zip with the command...
+<br><i>Expand-Archive -LiteralPath C:\Windows\Temp\Sysmon.zip -DestinationPath C:\Windows\Temp\Sysmon</i>
+
+<br>iii. Next we will download SwiftOnSecurity's Sysmon config.
+<br><i>Invoke-WebRequest -Uri https://raw.githubusercontent.com/SwiftOnSecurity/sysmon-config/master/sysmonconfig-export.xml -OutFile C:\Windows\Temp\Sysmon\sysmonconfig.xml</i>
+
+<br>iv. We will then install Sysmon with Swift config.
+<br><i>C:\Windows\Temp\Sysmon\Sysmon64.exe -accepteula -i C:\Windows\Temp\Sysmon\sysmonconfig.xml</i>
+
+<br>v. Lets validate that we have Sysmon64 service installed.
+<br><i>Get-Service sysmon64</i>
+
+<br>vi.Lastly, we will check for the presence of Sysmon Event Logs. 
+<br><i>Get-WinEvent -LogName "Microsoft-Windows-Sysmon/Operational" -MaxEvents 10</i>
+
+<hr>
 
 
 <h2>Installing LimaCharlie EDR on the Windows VM</h2>
