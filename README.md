@@ -158,3 +158,26 @@ i. In your LimaCharlie account, on the leftside of the screen open the "Sensors"
 <h2>Setup Attack System (Ubuntu)</h2>
 <hr>
 
+i. We should log into our Attack Machine (Ubuntu) and type in command line "sudo su". This command will allow or us to switch to a superuser or root with those privileges. 
+
+<br>ii. We then want to check the the IP address of the machine by entering this command line "ip a". We should see the address under "inet". We also want to take note of the ethernet adapter above it. In our machince instance it says "ens33".
+
+<br>iii. Becuase this IP address is a DHCP assigned IP address, there is a chance that it can change later on. We want to statically assigned the IP to the machine so that it will not change later. 
+
+<br>iii. We must find the IP address of the gatway by using the command "ping _gateway -c 1". An IP address for the gateway should appear after the "PING _gateway" in the terminal. 
+
+<br>iv. We want to configure the file for th network manager "netplan". Type is this command. 
+<br><i>sudo nano /etc/netplan/00-installer-config.yaml</i>
+
+<br>v. We then will edit the file by inputting our netowork information as such and save.;
+<br>Network:
+<br>ethernets:
+<br>ens33:
+<br>dhcp:no 
+<br>addresses: [ YourIP# /Subnet#]
+<br>gateway4: GatewayIP#
+<br>nameservers:
+<br>addresses:[8.8.8.8,...] 
+<br> version:2
+
+<br>vi. We will now type in the command "sudo netplan try" > then command "sudo netplan apply" > then check ping to Google DNS with command "ping 8.8.8.8". The IP should now be statically applied and we will now exit the command prompt.
