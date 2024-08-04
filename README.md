@@ -17,8 +17,8 @@ real-time protection, firewall and network protection, device performance monito
 <h3> Steps</h3>
 Set up the VM workstation Free personal use 17 pro. Windows Machine, then sign into the machine.
 
-<br>https://www.youtube.com/watch?v=rQHHqUDkf7M&t=24s
-<br>https://www.youtube.com/watch?v=UB8CQC_lT5U&t=44s
+<br>https://www.youtube.com/watch?v=rQHHqUDkf7M&t=24s (VM Workstation )
+<br>https://www.youtube.com/watch?v=UB8CQC_lT5U&t=44s (Windows Machine )
 
 <h3> A. Disabling Tamper Protection</h3>
 i. On your Windows Machine Click "Start" menu icon.
