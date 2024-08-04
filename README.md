@@ -4,6 +4,8 @@ This home lab demonstrates an attack and defense scenario that implements an EDR
 <h2> Set up the virtual Environment</h2>
 i. We will download and install the free VMare Workstation pro provided by Broadcom. You will need to create an account.
 
+<br>https://www.youtube.com/watch?v=rQHHqUDkf7M&t=24s (VM Workstation )
+
 <br>ii. You will then need to download Download the Ubuntu Server installer ISO. It must be the Ubunutu SERVER version as it comes with the preinstalled packages needed. 
 
 <br> The specs for the machine should be 14GB Disk, customize the hardware to 3 CPU cores and 2GB Ram.
@@ -43,9 +45,9 @@ real-time protection, firewall and network protection, device performance monito
 <br> Disabling Microsoft Defender on our Windows Machine is imperative for the attack to be successfull. This will allow for our EDR (LimaCharlie) to detect the attack and respond to it. If Microsoft Defender and its features are enabled the attack will face greater challenges to exploit the Windows Machine. Again, for demo. purposes we will disable Microsoft Windows on a virtual machine to demostrate the attack and defense.   
 
 <h3> Steps</h3>
-Set up the VM workstation Free personal use 17 pro. Windows Machine, then sign into the machine.
+Set up the Windows Machine, then sign into the machine.
 
-<br>https://www.youtube.com/watch?v=rQHHqUDkf7M&t=24s (VM Workstation )
+
 <br>https://www.youtube.com/watch?v=UB8CQC_lT5U&t=44s (Windows Machine )
 
 <h3> A. Disabling Tamper Protection</h3>
