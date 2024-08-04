@@ -258,3 +258,23 @@ i. Now the payload is on the Windows VM we will switch to our attack machine via
 <br>![Screenshot (94)](https://github.com/user-attachments/assets/56caa306-23f6-45e7-97ae-42789021660f)
 
 <h2>Observe EDR Telemetry </h2>
+
+i. Log into your LimaCharlie and then navigate to your organization we made earlier. We will then navigate to the "Sensors List" tab on the left. Then click on the Hostname of our Windows VM
+
+<br>![Screenshot (95)](https://github.com/user-attachments/assets/6abdf6d4-a80e-432f-bf89-15a15adcb6b2)
+
+<br> ii. We will now navigate to "processes" on the bottom left of the tab. As we scroll down we see many proccesses happening on our Windows Machine. It is important to take not of the name of many of the proccess and their unique PID numbers. Many of the process are common to Windows such as "msedge.exe" and "MicrosoftEdgeUpdate.exe" but whats even more important is that even though many of these processes are common they can be used to disguised malicious processes.
+<br> * An easy way to spot an unusual processes is by looking to see if it is NOT signed. One must remember that even though the processes is signed, the signed process can still be used to launch malicious processes or code. 
+<br> Click the menu icon next to the process we will also be able to navigate to  Network connections of that proccess to see the Source and Destination IP and ports of the process. Simple "ctrl f" and type in either the your implant name or attack IP address.  
+
+<br>![Screenshot (96)](https://github.com/user-attachments/assets/7ae57102-36b9-4d36-b475-f34519657486)
+
+<br>![Screenshot (97)](https://github.com/user-attachments/assets/55dfbf5c-daa6-43ea-91bd-91f1b014bc2f)
+
+<br>iv. Navigating to the "File System" tab we will then be able to traverse through our Windows machines' files and then find the path to our payload that was downloaded onto the system. Click the icon to inspect the HASH we are able to put it into Virustotal to see information regarding the malware we can find. 
+
+<br>** Not putting in the HASH for this malware will not give back any information from VirusTotal becuase we just created it. Also, just becuase no information is given back from VirusTotal during a malware analysis does not mean it does not exsist, you maybe dealing with a NEW malware / virus. **
+
+<br>![Screenshot (98)](https://github.com/user-attachments/assets/b6a82e03-e4f2-4623-89bc-1e60c3517126)
+
+
