@@ -286,7 +286,7 @@ i. We want to get back into our SSH session on the C2 session of the victim. We 
 
 <br>We will use the command... to dump the process "lsass.exe" into a dump in our C2 server named "lsass.dmp" in an attempted to gain senstive information about passwords and logins. 
 
-<br>procdump -n lsass.exe -s lsass.dmp<i></i>
+<br><i>procdump -n lsass.exe -s lsass.dmp</i>
 
 <br>![Screenshot (99)](https://github.com/user-attachments/assets/7cef5a4c-0786-42ab-8552-cfd35d77e8ef)
 
@@ -323,5 +323,14 @@ i. Navigate to LimaCharlie and access the timeline. We will input into the filte
 
 
 <br>![Screenshot (103)](https://github.com/user-attachments/assets/2fff2ff8-f6a4-48af-8522-db1ccce429dd)
+
+<h2> Detection</h2>
+
+i.Go back into your Attack machine and input the dump command we used earlier 
+
+<br><i>procdump -n lsass.exe -s lsass.dmp</i>
+
+<br>ii.Navigate to the "Sensor" in LimaCharlie and find "Detections". An alert should appear for the rule we created as well as more information about events and time. 
+
 
 
