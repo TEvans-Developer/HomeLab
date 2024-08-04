@@ -319,7 +319,7 @@ i. Navigate to LimaCharlie and access the timeline. We will input into the filte
 <br> ![Screenshot (101)](https://github.com/user-attachments/assets/776cdade-70d3-4d09-8e6c-1680f89c6fe8)
 
 
-<br>![Screenshot (102)](https://github.com/user-attachments/assets/27ca56c1-06c8-4b34-8f75-22b28c31acdb)
+<br>![Screenshot (102)](https://github.com/user-attachments/assets/9b8bf9eb-e461-4194-9b29-8e47a8c84ccd)
 
 
 <br>![Screenshot (103)](https://github.com/user-attachments/assets/2fff2ff8-f6a4-48af-8522-db1ccce429dd)
