@@ -332,5 +332,8 @@ i.Go back into your Attack machine and input the dump command we used earlier
 
 <br>ii.Navigate to the "Sensor" in LimaCharlie and find "Detections". An alert should appear for the rule we created as well as more information about events and time. 
 
+<br>![Screenshot (105)](https://github.com/user-attachments/assets/89c05d94-3556-46a2-8641-b21c11444a11)
+
+
 
 
