@@ -8,16 +8,17 @@ This home lab demonstrates an attack and defense scenario that implements an EDR
 <br>Microsft Defender is a comprehensive security tool developed by Microsoft to protect against various types of malware and cyber threats. It includes
 real-time protection, firewall and network protection, device performance monitoring and more. 
 
-<i>What do we need to disable Microsoft Defender for this lab?</i>
+<i>Why do we need to disable Microsoft Defender for this lab?</i>
 
-<br><b> **Disclaimer. One should not disable Microsoft Defender on their local machine as it is inplaced to help keep your local machine protected from cyber attacks.  For demostaration purposes we will be disabling it on a VM.** </b>
+<br><b> **Disclaimer. One should not disable Microsoft Defender on their local machine as it is in place to help keep your local machine protected from cyber attacks.  For demo purposes we will be disabling it on the victims VM.** </b>
 
-<br> Disabling Microsoft Defender on our Windows Machine is imperative for the attack to be successfull. This will allow for our EDR (LimaCharlie) to detect the attack and respond to it. If Microsoft Defender and its features are enabled the attack will face greater challenges to exploit the Windows Machine. Again, for demostration purposes we will disable Microsoft Windows on a virtual machine to demostrate the attack and defense.   
+<br> Disabling Microsoft Defender on our Windows Machine is imperative for the attack to be successfull. This will allow for our EDR (LimaCharlie) to detect the attack and respond to it. If Microsoft Defender and its features are enabled the attack will face greater challenges to exploit the Windows Machine. Again, for demo. purposes we will disable Microsoft Windows on a virtual machine to demostrate the attack and defense.   
 
 <h3> Steps</h3>
-Set up the Windows Machine, then sign into the machine.
+Set up the VM workstation Free personal use 17 pro. Windows Machine, then sign into the machine.
 
-<br>*** LINK HERE***
+<br>https://www.youtube.com/watch?v=rQHHqUDkf7M&t=24s
+<br>https://www.youtube.com/watch?v=UB8CQC_lT5U&t=44s
 
 <h3> A. Disabling Tamper Protection</h3>
 i. On your Windows Machine Click "Start" menu icon.
@@ -26,7 +27,7 @@ i. On your Windows Machine Click "Start" menu icon.
 <br>iv. Click "Windows Security"
 <br>v. Click "Virus & Threat protection"
 <br>vi. Underneath the "Virus & Threat protection settings" click "Manage Settings"
-<br>vii. Toggle OFF the "Tamper protection" switch. When promtped click yes to allow the changes.
+<br>vii. Toggle OFF the "Tamper protection" switch. When prompted click yes to allow the changes.
 
 <br>![Screenshot (78)](https://github.com/user-attachments/assets/11c5d2c9-829f-4c22-8c43-2b2a225d0f04)
 
@@ -57,7 +58,7 @@ i. Click "Start" menu icon
 
 
 
-<br>v.Allow the System to "Restart" in Safe Mode and re-sign in. Once signed in you will notice the save mode at the top of the left corner of the Machine. 
+<br>v.Allow the System to "Restart" in Safe Mode and re-sign in. Once signed in you will notice the save mode at the corner of the Machines. 
 
 <h3>Disabling services via the Registry while in Safe Mode</h3>
 i. Click the "Start" menu icon
