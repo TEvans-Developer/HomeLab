@@ -231,6 +231,30 @@ i. We will begin a SSH session from into our Attack machine as we did earlier us
 
 <h2>We will start and command the control session</h2>
 i. Now the payload is on the Windows VM we will switch to our attack machine via the SSH session and enable Sliver HTTP server to call the callback. We first will terminate the python webserver we started ( ctrl + c) then relaunch sliver "sliver-server" is the command.
-<br> ii. We will then start Sliver http listener with the command
+
+<br> ii. We will then start Sliver http listener with the command, if an error occurs try rebooting the vm.
 
 <br><i>http</i>
+
+<br>iii. We will now go back to the Windows VM and execute the C2 payload that was downloaded using the same Admin Powershell prompt. The Command is...
+
+<br> C:\Users\User\Downloads\<your_C2-implant>.exe
+
+<br> note in our SSH on the C2 end we have a session on our Sliver server coming from our Windows machine. Verify and take note of your session ID by entering the command "sessions"
+
+<br>iv. To interact with the new C2 session by typing the following command into the Sliver shell with your session id. commond should be ...
+
+<br> use [session_id]
+
+<br>v. We are now able to interact with the C2 session on the Windows VM. Use some basic commands to get our "victims" host information. Use code "info", "whoami", "getprivs","pwd" and even examine network connections occuring on the remote system "netstat"
+
+<br>![Screenshot (92)](https://github.com/user-attachments/assets/00960469-6f94-4a62-aa0f-39828a39dfe2)
+
+
+<br>![Screenshot (93)](https://github.com/user-attachments/assets/81b55bc6-12c0-4f79-9163-80f31d04fe59)
+
+<br> vi. After typing netstat you should notice a  rphcp.exe executable will is part of LimaCharlie EDR service. We will not identify running process by using the command ps -T. It is important to take note of highlighted red "Sysmon64.exe" and the <i>Security Product(s): Sysmon64 </i> at the bottom of our list. This helps makes attackers aware of what security products a victim system is using.Also notice our implant "EQUAL_THINKING.exe" in green. 
+
+<br>![Screenshot (94)](https://github.com/user-attachments/assets/56caa306-23f6-45e7-97ae-42789021660f)
+
+<h2>Observe EDR Telemetry </h2>
