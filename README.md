@@ -1,6 +1,34 @@
 # HomeLab
 This home lab demonstrates an attack and defense scenario that implements an EDR response using LimaCharlie on a Windows Machine against  Silver (attack ) from a C2 machine (Ubunutu). 
 
+<h2> Set up the virtual Environment</h2>
+i. We will download and install the free VMare Workstation pro provided by Broadcom. You will need to create an account.
+
+<br>ii. You will then need to download Download the Ubuntu Server installer ISO. It must be the Ubunutu SERVER version as it comes with the preinstalled packages needed. 
+
+<br> The specs for the machine should be 14GB Disk, customize the hardware to 3 CPU cores and 2GB Ram.
+
+<br> During the install leave defaults, when prompt Installer update available click "Continue without updating".
+
+<br>iii. Once you reach the Network connections you want to find and set a static IP address for the VM so it does not change during the lab or anytime after.  You will need navigate to "Edit" on top of the VM Workstation, Click "Vitrual Network Editor", select the "Type:NAT" network and click "NAT Settings". You should copy down the subnet and gateway IP.
+
+<br>iv. On the Ubuntu installer change from the DHCPv4 > edit the IPv4 > manual. You will then  input the Subnet IP address with the subnet, Address (DHCPv4) provided, gateway IP and a name servers 8.8.8.8
+
+<br>v.  Onces down you will need to create a memorable username/password for this lab. Then install OpenSSH server by checking the box after.
+
+<br>vi. Click enter on Reboot Now when the install says it is completed... If its stays on "removing the CDROM" press "Enter".
+
+<br>vii. After the reboot , login with your username and password so we can making an outbound ping attempt to a DNS, use command...
+
+<br><i>ping -c 2 google.com</i>
+
+REFERENCE TO THESE STEPS and OTHER  FOLLOW THE VIDEO 
+https://www.youtube.com/watch?v=oOzihldLz7U
+
+
+
+
+<hr>
 <h2>Disabling Microsoft Defender</h3>
 <hr>
 <i>What is Microsoft Defender?</i>
@@ -113,15 +141,15 @@ i. Open a "cmd" in "Run as admin." and input the following commands.
 <hr>
 <i> What is LimaCharlie </i>
 
-<br> A SecOps cloud-based security tools and infrastructure
+<br> A SecOps cloud-based security tool and infrastructure
 
 <h3>Setting up LimaCharlie</h3>
-i. Go to LimaCharlie website and set up an account. Once the account is set up and question are answered "Create a new organization"
-<br>ii. The name should be unique, "Data Residency Region" should be whatever is closest to you, in this cause for me it is USA. Demo Configuration should be disabled with the "Demo Configuration" "Template" set as "Extended Detection & Response Standard". Then click "Create Organization"
+i. Go to LimaCharlie website and set up an account. Once the account is set up and questions are answered "Create a new organization"
+<br>ii. The name should be unique, "Data Residency Region" should be whatever is closest to you, in this cause for me it is USA. Demo Configuration should be disabled with the "Demo Configuration" "Template" set as "Extended Detection & Response Standard". Then click "Create Organization".
 
 <br>![Screenshot (83)](https://github.com/user-attachments/assets/875dfde1-76ee-4566-9464-84b58014b4d7)
 
-<br>iii. Once Org. is created you will need to click "Add Sensor". The credentials for this will be ass follow. Select "Windows" > provide a description for the key > click "Create" > Select Installation Key and select the key that was just created.
+<br>iii. Once the Org. is created you will need to click "Add Sensor". The credentials for this will be as follows. Select "Windows" > provide a description for the key > click "Create" > Select Installation Key and select the key that was just created.
 
 <br>iv. We then will install Windows sensor "x86.64(.exe)"
 
