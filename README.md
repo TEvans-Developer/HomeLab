@@ -193,7 +193,7 @@ We will be using the coommand prompt on our host machine, may it be Linux, Mac, 
 
 <br>ii. After gaining access we will input the command <i> sudo su </i> to help set up our C2 server by dropping us into the root shell.
 
-<br>iii. Our next set of commands will be used to download Sliver, which will be our Command and Control (C2) framework.
+<br>iii. Our next set of commands will be used to download Sliver, which will be our Command and Control (C2) framework. Follow these commands.
 
 <br> wget https://github.com/BishopFox/sliver/releases/download/v1.5.34/sliver-server_linux -O /usr/local/bin/sliver-server
 <br> chmod +x /usr/local/bin/sliver-server
