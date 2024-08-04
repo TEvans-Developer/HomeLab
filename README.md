@@ -277,4 +277,19 @@ i. Log into your LimaCharlie and then navigate to your organization we made earl
 
 <br>![Screenshot (98)](https://github.com/user-attachments/assets/b6a82e03-e4f2-4623-89bc-1e60c3517126)
 
+<br>v. Navigate to the "Timeline" tab on the left side of the menu of the sensor and you will be taken to a window that allows for near real-time EDR telemetry and event logs that you can also filter to find proccess such as the implant that was mad. 
+
+<h2>Adversarial</h2>
+i. We want to get back into our SSH session on the C2 session of the victim. We will then run the command "getprivs" to find if we have "SeDebugPrivilege" enabled. If it is not you must relaunch your C2 implant with admin rights on the Window Powershell. This is important because it is a power privilege which mean we will likley have access to important information...
+
+<br>ii. We will steal credentials on a system by dumping the lsass.exe process from memory. LSASS stands for the Local Security Authority Subsystem Service. This is critical for Windows operating system as its responsible for enforcing the security policy on the system such as user authentication (logins and passwords), access control and more. 
+
+<br>We will use the command... to dump the process "lsass.exe" into a dump in our C2 server named "lsass.dmp" in an attempted to gain senstive information about passwords and logins. 
+
+<br>procdump -n lsass.exe -s lsass.dmp<i></i>
+
+<br>![Screenshot (99)](https://github.com/user-attachments/assets/7cef5a4c-0786-42ab-8552-cfd35d77e8ef)
+
+
+
 
