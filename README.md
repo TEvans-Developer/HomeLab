@@ -290,6 +290,38 @@ i. We want to get back into our SSH session on the C2 session of the victim. We 
 
 <br>![Screenshot (99)](https://github.com/user-attachments/assets/7cef5a4c-0786-42ab-8552-cfd35d77e8ef)
 
+<h2>Building Detection and response rules. </h2>
 
+i. Navigate to LimaCharlie and access the timeline. We will input into the filter "SENSITIVE_PROCESS_ACCESS" to find the event type that is common to lsass.exe. We will then click any of the listed process and analysis the events. Notice in event 1 we have a source which is our implant and a target that it is getting, the lsass.exe.  
+
+<br>ii. Once you see this , on the same event log click the small back with the arrow on the top right of the window to build a detection and response rule for the event.
+
+<br>![Screenshot (100)](https://github.com/user-attachments/assets/a53750f4-b847-495c-858e-034a23728a84)
+
+<br>We will now in the detect section of the new rule, remove the old content and replace it with ... 
+
+<br>event: SENSITIVE_PROCESS_ACCESS
+<br>op: ends with
+<br>path: event/*/TARGET/FILE_PATH
+<br>value: lsass.exe 
+
+<br> The detect section rules are let us write a rule to look for and detect only "SENSITIVE_PROCESS_ACCESS" events where the victim or target process end with "lsass.exe". 
+
+<br> We will also replace the "Respond" section with a new rule...
+
+<br>- action: report
+<br>  name: LSASS access
+
+<br> The "Respond" rule is  telling LimaCharlie to generate detection reports anytime this detection occurs. 
+
+<br>iii. We will now test the event by clicking, "Target Event" and scrolling down and clicking "Test Event". It should give us a match fitting the parameters of our rule. We will save the rule as "LSASS ACCESSED" and enable it. 
+
+<br> ![Screenshot (101)](https://github.com/user-attachments/assets/776cdade-70d3-4d09-8e6c-1680f89c6fe8)
+
+
+<br>![Screenshot (102)](https://github.com/user-attachments/assets/27ca56c1-06c8-4b34-8f75-22b28c31acdb)
+
+
+<br>![Screenshot (103)](https://github.com/user-attachments/assets/2fff2ff8-f6a4-48af-8522-db1ccce429dd)
 
 
