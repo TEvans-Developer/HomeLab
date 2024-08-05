@@ -1,6 +1,8 @@
 # HomeLab
 This home lab demonstrates an attack and defense scenario that implements an EDR response using LimaCharlie on a Windows Machine against  Silver (attack ) from a C2 machine (Ubunutu). 
 
+<h1>**HACKING SHOULD ONLY BE DOWN ETHICALLY AND WITH PERMISSION. THIS PROJECT IS INTENDED FOR DEMOSTRATION PURPOSES ONLY **</h1>
+
 <h2> Set up the virtual Environment</h2>
 i. We will download and install the free VMare Workstation pro provided by Broadcom. You will need to create an account.
 
