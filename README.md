@@ -170,12 +170,12 @@ i. Go to LimaCharlie website and set up an account. Once the account is set up a
 <br> From here you want to enter the command to shift into the standard command prompt
 <br> "<i>cmd.exe</i>"
 
-<br>vi. We then will copy the installer code that is provide from the LimaCharlie website into our terminal
-<br>** code maybe mixing the "lc_sensor.exe" before the "-i" in the given installer code. Enter "lc_sensor.exe" prior to pastingn the installer code to ensure it will install properly. 
+<br>vi. We then will copy the installer code that is provided from the LimaCharlie website into our terminal
+<br>** code maybe missing the "lc_sensor.exe" before the "-i" in the given installer code. Enter "lc_sensor.exe" prior to pasting the installer code to ensure it will install properly. 
 
 <br>![Screenshot (85)](https://github.com/user-attachments/assets/efa26cb3-2e08-4ad6-adc5-683dddd4add7)
 
-<h3>Configuring LimaCharlie to ship Sysmon even logs alongside its own EDR telemetry</h3>
+<h3>Configuring LimaCharlie to ship Sysmon event logs alongside its own EDR telemetry</h3>
 i. In your LimaCharlie account, on the leftside of the screen open the "Sensors" tab , find and click "Artifact Collection". 
 
 <br>ii. Navigate to "Artifact Collection Rule" and click "+Add Artifact Collection Rule"
@@ -189,7 +189,7 @@ i. In your LimaCharlie account, on the leftside of the screen open the "Sensors"
 <h2>Setup Attack System (Ubuntu)</h2>
 <hr>
 
-i. We should log into our Attack Machine (Ubuntu) and type in command line "sudo su". This command will allow or us to switch to a superuser or root with those privileges. 
+i. We should log into our Attack Machine (Ubuntu) and type in command line "sudo su". This command will allow for us to switch to a superuser or root with those privileges. 
 
 <br>ii. We then want to check the the IP address of the machine by entering this command line "ip a". We should see the address under "inet". We also want to take note of the ethernet adapter above it. In our machince instance it says "ens33".
 
@@ -271,7 +271,7 @@ i. Now the payload is on the Windows VM we will switch to our attack machine via
 
 <br> C:\Users\User\Downloads\<your_C2-implant>.exe
 
-<br> note in our SSH on the C2 end we have a session on our Sliver server coming from our Windows machine. Verify and take note of your session ID by entering the command "sessions"
+<br> Note in our SSH on the C2 end we have a session on our Sliver server coming from our Windows machine. Verify and take note of your session ID by entering the command "sessions"
 
 <br>iv. To interact with the new C2 session by typing the following command into the Sliver shell with your session id. commond should be ...
 
@@ -284,7 +284,7 @@ i. Now the payload is on the Windows VM we will switch to our attack machine via
 
 <br>![Screenshot (93)](https://github.com/user-attachments/assets/81b55bc6-12c0-4f79-9163-80f31d04fe59)
 
-<br> vi. After typing netstat you should notice a  rphcp.exe executable will is part of LimaCharlie EDR service. We will not identify running process by using the command ps -T. It is important to take note of highlighted red "Sysmon64.exe" and the <i>Security Product(s): Sysmon64 </i> at the bottom of our list. This helps makes attackers aware of what security products a victim system is using.Also notice our implant "EQUAL_THINKING.exe" in green. 
+<br> vi. After typing netstat you should notice a  rphcp.exe executable which is part of LimaCharlie EDR service. We will now identify running process by using the command ps -T. It is important to take note of highlighted red "Sysmon64.exe" and the <i>Security Product(s): Sysmon64 </i> at the bottom of our list. This helps makes attackers aware of what security products a victim system is using. Also notice our implant "EQUAL_THINKING.exe" in green. 
 
 <br>![Screenshot (94)](https://github.com/user-attachments/assets/56caa306-23f6-45e7-97ae-42789021660f)
 
@@ -308,22 +308,22 @@ i. Log into your LimaCharlie and then navigate to your organization we made earl
 
 <br>![Screenshot (98)](https://github.com/user-attachments/assets/b6a82e03-e4f2-4623-89bc-1e60c3517126)
 
-<br>v. Navigate to the "Timeline" tab on the left side of the menu of the sensor and you will be taken to a window that allows for near real-time EDR telemetry and event logs that you can also filter to find proccess such as the implant that was mad. 
+<br>v. Navigate to the "Timeline" tab on the left side of the menu of the sensor and you will be taken to a window that allows for near real-time EDR telemetry and event logs that you can also filter to find proccess such as the implant that was made. 
 
 <h2>Adversarial</h2>
 i. We want to get back into our SSH session on the C2 session of the victim. We will then run the command "getprivs" to find if we have "SeDebugPrivilege" enabled. If it is not you must relaunch your C2 implant with admin rights on the Window Powershell. This is important because it is a power privilege which mean we will likley have access to important information...
 
 <br>ii. We will steal credentials on a system by dumping the lsass.exe process from memory. LSASS stands for the Local Security Authority Subsystem Service. This is critical for Windows operating system as its responsible for enforcing the security policy on the system such as user authentication (logins and passwords), access control and more. 
 
-<br>We will use the command... to dump the process "lsass.exe" into a dump in our C2 server named "lsass.dmp" in an attempted to gain senstive information about passwords and logins. 
+<br>We will use the command... to dump the process "lsass.exe" into a dump in our C2 server named "lsass.dmp" in an attempt to gain sensitive information about passwords and logins. 
 
 <br><i>procdump -n lsass.exe -s lsass.dmp</i>
 
 <br>![Screenshot (99)](https://github.com/user-attachments/assets/7cef5a4c-0786-42ab-8552-cfd35d77e8ef)
 
-<h2>Building Detection and response rules. </h2>
+<h2>Building Detection and Response rules. </h2>
 
-i. Navigate to LimaCharlie and access the timeline. We will input into the filter "SENSITIVE_PROCESS_ACCESS" to find the event type that is common to lsass.exe. We will then click any of the listed process and analysis the events. Notice in event 1 we have a source which is our implant and a target that it is getting, the lsass.exe.  
+i. Navigate to LimaCharlie and access the timeline. We will input into the filter "SENSITIVE_PROCESS_ACCESS" to find the event types that are common to lsass.exe. We will then click any of the listed process and analysis the events. Notice in event 1 we have a source which is our implant and a target that it is getting, the lsass.exe.  
 
 <br>ii. Once you see this , on the same event log click the small back with the arrow on the top right of the window to build a detection and response rule for the event.
 
@@ -364,6 +364,17 @@ i.Go back into your Attack machine and input the dump command we used earlier
 <br>ii.Navigate to the "Sensor" in LimaCharlie and find "Detections". An alert should appear for the rule we created as well as more information about events and time. 
 
 <br>![Screenshot (105)](https://github.com/user-attachments/assets/89c05d94-3556-46a2-8641-b21c11444a11)
+
+
+<h2>Summary of the Lab</h2>
+This lab demostrates many different aspects of working in a CyberSecurity environment on both the blue and red team side. The victims devices (Windows Machine) we set up to have many different vulnerabilities that could be exploited becuase of the lack of security measures (Disabled Microsoft Defender). A commond and control (C2) frameworkd known as Sliver was used on the Ubuntu VM and acted as a Server that had a malicious executable that was generated and downloaded by the Windows Machine and implanted in that Windows machine as a process. The execuatble will access the machine and its privileges to obtain sensistive information from other process found within the machine. Fortunaly, we had EDR solution tool LimaCharlie and Sysmon monitoring installed and sync in our Window machine for near -real time monitoring, automate rules for detections, block our attack machine and other essential analysis if needed to combat this cyber attack.
+
+References :
+
+https://blog.ecapuano.com/p/so-you-want-to-be-a-soc-analyst-intro?utm_campaign=post&utm_medium=web (Lab Reference blog)
+https://www.youtube.com/watch?v=oOzihldLz7U&t=1s (Lab Reference video )
+https://www.youtube.com/watch?v=rQHHqUDkf7M&t=24s (VM Workstation )
+<br>https://www.youtube.com/watch?v=UB8CQC_lT5U&t=44s (Windows Machine )
 
 
 
