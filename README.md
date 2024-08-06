@@ -26,7 +26,7 @@ i. We will download and install the free VMare Workstation pro provided by Broad
 
 <br><i>ping -c 2 google.com</i>
 
-REFERENCE TO THESE STEPS and OTHER  FOLLOW THE VIDEO 
+REFERENCE TO THESE STEPS and OTHERS  FOLLOW THE VIDEO 
 https://www.youtube.com/watch?v=oOzihldLz7U
 
 
