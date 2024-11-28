@@ -1,4 +1,4 @@
-# EDR Lab
+# EDR Home Lab: Threat Detection and Response Simulation with Lima Charlie, Sysmon, and Sliver C2
 This home lab demonstrates an attack and defense scenario that implements an EDR response using LimaCharlie on a Windows Machine against  Sliver (attack ) from a C2 machine (Ubunutu). 
 
 <h1>**HACKING SHOULD ONLY BE DONE ETHICALLY AND WITH PERMISSION. THIS PROJECT IS INTENDED FOR DEMONSTRATION PURPOSES ONLY **</h1>
